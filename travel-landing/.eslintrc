@@ -10,8 +10,7 @@
   },
   "plugins": [
     //load the previously installed plugin; allows me to use the rules within my codebase
-    "@typescript-eslint",
-    "react-hooks"
+    "@typescript-eslint"
   ],
   "extends": [
     "airbnb-typescript",

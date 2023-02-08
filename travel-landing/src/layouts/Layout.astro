@@ -9,14 +9,10 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-  <title>Web Development Case Study | UpperRoom | AgilityIO</title>
-  <meta content="Travel landing" name="description">
-  <meta content="Web Development Travel landing" property="og:title">
-  <meta content="Travel landing with Astro" property="og:description">
-  <meta property="og:image" content="/favicon.svg" />
-  <meta content="summary" name="twitter:card">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="utf-8" />
+    <title>Web Development Travel Landing</title>
+    <meta content="Travel landing" name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -25,17 +21,3 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #F6F6F6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-</style>
