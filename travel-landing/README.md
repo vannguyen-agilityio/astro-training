@@ -1,54 +1,29 @@
-# Astro Starter Kit: Basics
+# Travel Landing
+## Workflow
+![Flowchart](./Flowcharts.png)
 
-```
-npm create astro@latest -- --template basics
-```
+## Tech stacks:
+- [HTML5](https://en.wikipedia.org/wiki/HTML5):  is also a candidate for cross-platform mobile applications because it includes features designed with low-powered devices in mind
+- [CSS3](https://www.techopedia.com/definition/28243/cascading-style-sheets-level-3-css3#:~:text=Cascading%20Style%20Sheets%20Level%203%20(CSS3)%20is%20the%20iteration%20of,easier%20to%20learn%20and%20understand.): is separated into separate modules to facilitate development. This means that the specification comes out in chunks, with more stable modules than others.
+- [Astro](https://astro.build/): an all-in-one web framework for building fast, content-focused websites
+- [Tailwind](https://tailwindcss.com/): a utility-first CSS framework packed with classes
+- [Typescript](https://www.typescriptlang.org/): adds additional syntax to JavaScript to support a tighter integration with your editor. Catch errors early in your editor
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+## Develop tools:
+- [Husky](https://www.npmjs.com/package/husky): improves your commits and run some commands before pushing/committing
+- [eslint](https://eslint.org/): Analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline
+- [prettier](https://prettier.io/): An opinionated code formatter, supports many languages and integrates with most editors
+- [commitlint](https://github.com/conventional-changelog/commitlint): checks if your commit messages meet the conventional commit format
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
+## Commands
 All commands are run from the root of the project, from a terminal:
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+| Command                | Action                                             |
+| :--------------------- | :------------------------------------------------- |
+| `pnpm install`          | Installs dependencies                              |
+| `pnpm run dev`          | Starts local dev server at `localhost:3000`        |
+| `pnpm run build`        | Build your production site to `./dist/`            |
+| `pnpm run preview`      | Preview your build locally, before deploying       |
+| `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
+| `pnpm run astro --help` | Get help using the Astro CLI                       |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
