@@ -5,15 +5,23 @@ import Button from '../components/Button/index.astro';
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1 class="p-8 mt-5">
+    <h1 class="mt-5">
       Travel <span class="text-primary">Around the World</span>
     </h1>
     <Button className="mb-2">Send</Button>
-    <Button type="primary"
+    <Button className="mb-2" type="rarely">Nuevo</Button>
+    <Button className="mb-2 uppercase" type="secondary">Book Hotel</Button>
+    <Button className="mb-2" type="primary"
       >Explore All Destinies<span
         class="ml-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
         >&#8594;</span
       >
+    </Button>
+    <Button className="pr-24" type="primary"
+      ><span
+        class="mr-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
+        >&#8592;</span
+      >Back
     </Button>
   </main>
 </Layout>

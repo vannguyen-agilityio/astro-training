@@ -1,6 +1,6 @@
 ---
 export interface ButtonProps {
-  type?: 'primary' | 'rarely';
+  type?: 'primary' | 'secondary' | 'rarely';
   className?: '';
   onclick: () => void;
 }
@@ -9,9 +9,11 @@ let { type = '', className = '', onclick = () => {} } = Astro.props;
 ---
 
 <button
-  class={`btn p-3 min-w-button text-light ${className} ${
-    type !== 'rarely' ? ' bg-primary' : 'bg-rarely'
-  } ${type === 'primary' ? 'px-12 py-8 flex items-center justify-center' : ''}`}
+  class={`p-1 min-w-btn min-w-btn-${type} min-h-btn min-h-btn-${type} text-light text-size-xs leading-xs ${className} bg-primary bg-${type} ${
+    type === 'primary'
+      ? `py-9 px-10 flex items-center text-size-sm leading-sm justify-between`
+      : ''
+  }`}
   {onclick}
 >
   <slot />

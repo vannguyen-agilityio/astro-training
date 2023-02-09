@@ -16,8 +16,19 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <style>
+      @font-face {
+        font-family: Abel;
+        src: url('../fonts/Abel-Regular.ttf') format('truetype'),
+          url('../fonts/Abel-Regular.woff') format('woff'),
+          url('../fonts/Abel-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-primary">
     <slot />
   </body>
 </html>
