@@ -4,10 +4,13 @@ module.exports = {
   safelist: [
     'bg-primary',
     'bg-rarely',
+
     'min-w-btn',
     'min-w-btn-primary',
     'min-w-btn-rarely',
     'min-w-btn-secondary',
+    'min-w-nav',
+
     'min-h-btn',
     'min-h-btn-primary',
     'min-h-btn-secondary',
@@ -27,7 +30,8 @@ module.exports = {
         'btn': '98px',
         'btn-primary': '310px',
         'btn-rarely': '110px',
-        'btn-secondary': '228px'
+        'btn-secondary': '228px',
+        'nav': '192px'
       },
       minHeight: {
         'btn': '46px',
@@ -35,24 +39,29 @@ module.exports = {
         'btn-rarely': '38px',
         'btn-secondary': '56px'
       },
+      maxWidth: {
+        'header': '695px',
+        'part': '50%',
+        'full': '100%'
+      },
       fontFamily: {
         primary: ['Abel', 'sans-serif']
       },
       fontSize: {
         'size-xs': '15px',
         'size-sm': '19px',
-        'size-lg': '20px',
-        'size-xl': '22px',
-        'size-2xl': '25px',
-        'size-3xl': '48px'
+        'size-md': '20px',
+        'size-lg': '22px',
+        'size-xl': '25px',
+        'size-2xl': '48px'
       },
       lineHeight: {
         'xs': '19px',
         'sm': '24px',
-        'lg': '25px',
-        'xl': '28px',
-        '2xl': '32px',
-        '3xl': '61px'
+        'md': '25px',
+        'lg': '28px',
+        'xl': '32px',
+        '2xl': '61px'
       }
     },
   },

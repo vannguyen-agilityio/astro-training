@@ -1,0 +1,34 @@
+---
+import { NAVIGATION } from 'src/constants/common';
+import { ROUTES } from 'src/constants/routes';
+
+export interface HeaderProps {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+
+const urlPathName = Astro.url.pathname?.replace('.html', '');
+---
+
+<header class={`${className}`}>
+  <div class="flex items-center justify-between sm:max-w-part md:max-w-header">
+    <a class="mr-2" href={ROUTES.HOME}>TW</a>
+    <nav>
+      <ul class="flex min-w-nav text-xs md:text-size-xs justify-between">
+        {
+          NAVIGATION.map((item, index) => (
+            <li class="">
+              <a
+                class={`${urlPathName === item.href ? 'text-primary' : ''}`}
+                href={item.href}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

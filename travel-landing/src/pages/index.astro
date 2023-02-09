@@ -1,43 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
 import Button from '../components/Button/index.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <h1 class="mt-5">
-      Travel <span class="text-primary">Around the World</span>
-    </h1>
-    <p class="text-dark text-size-lg leading-lg">
-      If you are creative person, this is your life!
-    </p>
-    <!-- <Button className="mb-2">Send</Button> -->
-    <!-- <Button className="mb-2" type="rarely">Nuevo</Button>
-    <Button className="mb-2 uppercase" type="secondary">Book Hotel</Button> -->
-    <!-- <Button className="mb-2" type="primary"
-      >Explore All Destinies<span
-        class="ml-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
-        >&#8594;</span
-      >
-    </Button> -->
-    <!-- <Button className="pr-24" type="primary"
-      ><span
-        class="mr-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
-        >&#8592;</span
-      >Back
-    </Button> -->
+  <main class="p-4 md:p-8 md:pr-0 2xl:container 2xl:mx-auto">
+    <div class="md:w-1/2 md:pr-4">
+      <Header />
+      <div class="pt-8 md:pl-20 md:pb-20 md:pt-32">
+        <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
+          Travel <span class="text-primary">Around the World</span>
+        </h1>
+        <p
+          class="text-dark text-xs md:text-xl xl:text-size-lg leading-lg md:mt-3"
+        >
+          If you are creative person, this is your life!
+        </p>
+      </div>
+    </div>
+    <div class="md:w-1/2 bg-red"></div>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-</style>
