@@ -1,0 +1,11 @@
+.play-button {
+  border-color: transparent transparent transparent #000;
+}
+
+.play-button-outer:hover {
+  background-color: rgba(225, 225, 225, 50%);
+}
+
+.play-button-outer:hover .play-button {
+  opacity: 1;
+}
