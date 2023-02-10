@@ -9,26 +9,32 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Web Development Travel Landing</title>
-    <meta content="Travel landing" name="description" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <style>
-      @font-face {
-        font-family: Abel;
-        src: url('../fonts/Abel-Regular.ttf') format('truetype'),
-          url('../fonts/Abel-Regular.woff') format('woff'),
-          url('../fonts/Abel-Regular.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
       }
     </style>
-  </head>
-  <body class="font-primary bg-lightSecondary">
-    <slot />
   </body>
 </html>
