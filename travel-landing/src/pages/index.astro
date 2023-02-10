@@ -10,7 +10,7 @@ import PlayButton from '../components/PlayButton/index.astro';
     <div class="md:w-1/2 md:pr-8 md:pt-6">
       <Header />
       <div class="pt-8 md:pl-20 md:pb-20 md:pt-32">
-        <h1 class="p-8">Travel <span>Around the World</span></h1>
+        <h1 class="p-8">Welcome to <span class="text-gradient">Astro</span></h1>
         <p
           class="text-dark text-xs md:text-xl xl:text-size-lg leading-lg sm:mt-4 xl:mt-8"
         >
@@ -39,3 +39,13 @@ import PlayButton from '../components/PlayButton/index.astro';
     </div>
   </main>
 </Layout>
+
+<style>
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
