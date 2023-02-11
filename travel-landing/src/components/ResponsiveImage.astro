@@ -56,12 +56,20 @@ const {
       />
     )
   }
-  <source srcset={url.default} type="image/png" />
+  {
+    url.mobile && (
+      <source
+        media="(max-width: 767px)"
+        srcset={url.mobile}
+        type="image/webp"
+      />
+    )
+  }
   <img
-    src={url?.mobile}
+    src={url?.default}
     alt={alt}
-    width={width?.mobile}
-    height={height?.mobile}
+    width={width?.default}
+    height={height?.default}
     loading={isLazyLoading ? 'lazy' : 'eager'}
   />
 </picture>
