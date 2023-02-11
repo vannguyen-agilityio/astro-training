@@ -56,15 +56,13 @@ const {
       />
     )
   }
-  {
-    url.mobile && (
-      <source
-        media="(max-width: 767px)"
-        srcset={url.mobile}
-        type="image/webp"
-      />
-    )
-  }
+  <source
+    media="(max-width: 767px)"
+    srcset={url.mobile}
+    width={width?.mobile}
+    height={height?.mobile}
+    type="image/webp"
+  />
   <img
     src={url?.default}
     alt={alt}
