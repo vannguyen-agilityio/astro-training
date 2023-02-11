@@ -6,16 +6,20 @@ import PlayButton from '../components/PlayButton/index.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="p-4 md:pl-8 md:py-0 md:pr-0 md:flex 2xl:container 2xl:mx-auto">
+  <main
+    class="md:px-4 md:pl-8 md:py-0 md:pr-0 md:flex 2xl:container 2xl:mx-auto"
+  >
     <div class="mt-4 sm:w-1/2 sm:mt-0 relative">
       <ResponsiveImage
         className="d-flex"
         alt="Background video travel landing banner"
         width={{
-          default: '100%'
+          default: '100%',
+          mobile: '375px'
         }}
         height={{
-          default: '100%'
+          default: '100%',
+          mobile: '478px'
         }}
         url={{
           desktop: '../images/home/webp/bg-video.webp',
