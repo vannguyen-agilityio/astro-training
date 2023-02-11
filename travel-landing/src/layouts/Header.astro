@@ -20,7 +20,7 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
           NAVIGATION.map((item, index) => (
             <li class="">
               <a
-                class={`${urlPathName === item.href ? 'text-black' : ''}`}
+                class={`${urlPathName === item.href ? 'text-primary' : ''}`}
                 href={item.href}
               >
                 {item.label}
