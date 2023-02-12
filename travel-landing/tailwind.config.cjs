@@ -23,7 +23,7 @@ module.exports = {
         lightPrimary: '#fafafa',
         lightSecondary: '#f2f2f2',
         dark: '#34343f',
-        primary: '#f89f4e',
+        primary: '#80410A',
         rarely: '#02a29f'
       },
       minWidth: {
