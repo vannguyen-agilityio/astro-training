@@ -21,9 +21,9 @@ module.exports = {
       colors: {
         light: '#ffffff',
         lightPrimary: '#fafafa',
-        lightSecondary: '#f2f2f2',
+        lightSecondary: '#f8f8f8',
         dark: '#34343f',
-        primary: '#80410A',
+        primary: '#f89f4e',
         rarely: '#02a29f'
       },
       minWidth: {
