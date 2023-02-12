@@ -12,8 +12,10 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
 ---
 
 <header class={`${className}`}>
-  <div class="flex items-center justify-between sm:max-w-part md:max-w-header">
-    <a class="mr-2" href={ROUTES.HOME}>TW</a>
+  <div
+    class="flex px-4 items-center justify-between sm:px-0 sm:max-w-part md:max-w-header"
+  >
+    <a class="mr-4" href={ROUTES.HOME}>TW</a>
     <nav>
       <ul class="flex min-w-nav text-xs md:text-size-xs justify-between">
         {

@@ -7,11 +7,13 @@ import PlayButton from '../components/PlayButton/index.astro';
 
 <Layout title="Welcome to Astro.">
   <main
-    class="md:px-4 md:pl-8 md:py-0 md:pr-0 md:flex 2xl:container 2xl:mx-auto"
+    class="sm:px-4 sm:pl-8 sm:py-0 sm:pr-0 sm:flex 2xl:container 2xl:mx-auto"
   >
-    <div class="md:py-4 md:w-1/2 md:pr-4">
+    <div class="pt-4 sm:py-4 sm:w-1/2 sm:pr-4">
       <Header />
-      <div class="pt-8 md:pl-20 md:pb-20 md:pt-32">
+      <div
+        class="px-4 pt-8 sm:pr-0 sm:pl-8 sm:pb-8 sm:pt-20 md:pl-20 md:pb-20 md:pt-32"
+      >
         <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
           Travel <span class="text-primary">Around the World</span>
         </h1>
@@ -28,11 +30,11 @@ import PlayButton from '../components/PlayButton/index.astro';
         alt="Background video travel landing banner"
         width={{
           desktop: '100%',
-          mobile: '375px'
+          mobile: '100%'
         }}
         height={{
           desktop: '100%',
-          mobile: '478px'
+          mobile: '100%'
         }}
         url={{
           desktop: '../images/home/webp/bg-video.webp',
