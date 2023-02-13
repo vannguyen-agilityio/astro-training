@@ -43,9 +43,18 @@ import PlayButton from '../components/PlayButton/index.astro';
           default: '../images/home/png/bg-video.png'
         }}
       />
+      <div id="video">
+        <!-- CLOSE BUTTON -->
+        <div id="close" class="hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0">X</div>
+        <!-- IFRAME VIDEO -->
+        <div class="youtube w-embed w-iframe absolute top-0 w-full h-full" id="banner-video"></div>
+      </div>
       <PlayButton
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        id="play"
+        className="absolute cursor-pointer top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
     </div>
   </main>
 </Layout>
+
+<script defer type="text/javascript" src="src/js/video-hero.js" charset="UTF-8"></script>

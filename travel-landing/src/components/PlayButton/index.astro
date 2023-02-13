@@ -3,12 +3,14 @@ import './styles.css';
 
 export interface ImageProps {
   className?: string;
+  id?: string;
 }
 
-const { className } = Astro.props as ImageProps;
+const { id, className } = Astro.props as ImageProps;
 ---
 
 <div
+  id={id}
   class={`play-button-outer rounded-full mx-auto w-12 h-12 md:w-24 md:h-24 bg-white cursor-pointer ${className}`}
 >
   <div
