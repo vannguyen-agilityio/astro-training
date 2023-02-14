@@ -139,6 +139,7 @@ import Button from 'components:Button/index';
       if (!iframe) {
         // Create iframe once loading
         iframe = document.createElement('iframe');
+        playButton.classList.add('hidden');
         iframe.allowfullscreen = '';
         iframe.allow =
           'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
