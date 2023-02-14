@@ -94,32 +94,3 @@ import Button from 'components:Button/index';
 </Layout>
 <script defer type="text/javascript" src="/js/video-hero.js" charset="UTF-8"
 ></script>
-<script>
-  let playButtonId = document.getElementById('play');
-
-  // Intersection for play button and youtube player
-  var playIO = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting) {
-        const youtubeApiSrc = 'https://www.youtube.com/iframe_api';
-        const youtubeApiScriptTag = document.querySelectorAll(
-          `script[src^="${youtubeApiSrc}"]`
-        )[0];
-        let firstScriptTag = document.getElementsByTagName('script')[0];
-        if (!youtubeApiScriptTag) {
-          let tag = document.createElement('script');
-          // 2. This code loads the IFrame Player API code asynchronously.
-          tag.src = youtubeApiSrc;
-          tag.defer = true;
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        }
-      }
-    },
-    {
-      root: null, // avoiding 'root' or setting it to 'null' sets it to default value: viewport
-      rootMargin: '0px',
-      threshold: 1
-    }
-  );
-  playIO.observe(playButtonId);
-</script>
