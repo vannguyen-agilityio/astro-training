@@ -48,10 +48,6 @@ function play() {
     iframe.height = '100%';
     iframe.title = 'AgilityIO - Life at Agility Vietnam';
     iframe.style = 'border: 0';
-    iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/ci9QZbNLct0?enablejsapi=1');
-    iframe.setAttribute('data-cookieblock-src', 'https://www.youtube-nocookie.com/embed/ci9QZbNLct0?enablejsapi=1');
-    iframe.setAttribute('data-cookieconsent', 'marketing');
-    iframe.setAttribute('data-consent', 'analytics');
     iframeWrapper.appendChild(iframe)
 
     // Initialize player to control when play/pause
