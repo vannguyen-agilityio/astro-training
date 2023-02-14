@@ -1,25 +1,25 @@
 ---
 export interface ImageProps {
   className?: string;
-  alt?: string;
+  alt: string;
   width: {
     mobile?: string;
     tablet?: string;
     desktop?: string;
-    default?: string;
+    default: string;
   };
   height: {
     mobile?: string;
     tablet?: string;
     desktop?: string;
-    default?: string;
+    default: string;
   };
   url: {
     mobile?: string;
     mobile2x?: string;
     tablet?: string;
     desktop?: string;
-    default?: string;
+    default: string;
   };
   isLazyLoading?: boolean;
 }
@@ -70,10 +70,10 @@ const {
     )
   }
   <img
-    src={url?.default}
+    src={url.default}
     alt={alt}
-    width={width?.default}
-    height={height?.default}
+    width={width.default}
+    height={height.default}
     loading={isLazyLoading ? 'lazy' : 'eager'}
   />
 </picture>

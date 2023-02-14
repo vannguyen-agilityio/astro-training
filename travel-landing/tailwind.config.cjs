@@ -4,26 +4,28 @@ module.exports = {
   safelist: [
     'bg-primary',
     'bg-rarely',
-
     'min-w-btn',
     'min-w-btn-primary',
     'min-w-btn-rarely',
     'min-w-btn-secondary',
     'min-w-nav',
-
+    'min-w-input-sm',
     'min-h-btn',
     'min-h-btn-primary',
     'min-h-btn-secondary',
     'min-h-btn-rarely',
+    'min-h-input-sm',
+    'text-tertiary',
+    'text-primary'
   ],
   theme: {
     extend: {
       colors: {
-        light: '#ffffff',
+        light: '#fff',
         lightPrimary: '#fafafa',
-        lightSecondary: '#f8f8f8',
-        dark: '#34343f',
-        primary: '#a75206',
+        secondary: '#f8f8f8',
+        tertiary: '#34343f',
+        primary: '#f89f4e',
         rarely: '#02a29f'
       },
       minWidth: {
@@ -31,13 +33,15 @@ module.exports = {
         'btn-primary': '310px',
         'btn-rarely': '110px',
         'btn-secondary': '228px',
-        'nav': '192px'
+        'nav': '230px',
+        'input-sm': '240px'
       },
       minHeight: {
         'btn': '46px',
         'btn-primary': '110px',
         'btn-rarely': '38px',
-        'btn-secondary': '56px'
+        'btn-secondary': '56px',
+        'input-sm': '46px'
       },
       maxWidth: {
         'header': '695px',

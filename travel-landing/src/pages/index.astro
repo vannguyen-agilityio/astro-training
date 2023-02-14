@@ -1,58 +1,89 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../layouts/Header.astro';
-import ResponsiveImage from '../components/ResponsiveImage.astro';
-import PlayButton from '../components/PlayButton/index.astro';
+import Layout from 'layouts:Layout';
+import Header from 'layouts:Header';
+import ResponsiveImage from 'components:ResponsiveImage';
+import PlayButton from 'components:PlayButton/index';
+import Input from 'components:Input/index';
+import Button from 'components:Button/index';
 ---
 
 <Layout title="Welcome to Astro.">
   <main
     class="sm:px-4 sm:pl-8 sm:py-0 sm:pr-0 sm:flex 2xl:container 2xl:mx-auto"
   >
-    <div class="pt-4 sm:py-4 sm:w-1/2 sm:pr-4">
+    <div class="pl-4 ppt-4 sm:py-4 sm:w-1/2 sm:pr-4">
       <Header />
       <div
-        class="px-4 pt-8 sm:pr-0 sm:pl-8 sm:pb-8 sm:pt-20 md:pl-20 md:pb-20 md:pt-32"
+        class="px-4 pt-8 sm:pr-0 md:pl-8 md:pb-8 md:pt-20 md:pl-20 md:pt-32"
       >
-        <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
-          Travel <span class="text-primary">Around the World</span>
-        </h1>
-        <p
-          class="text-dark text-xs md:text-xl xl:text-size-lg leading-lg sm:mt-4 xl:mt-8"
-        >
-          If you are creative person, this is your life!
-        </p>
+        <div class="pb-14 xl:pb-24">
+          <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
+            Travel <span class="text-primary">Around the World</span>
+          </h1>
+          <p
+            class="text-dark text-xs md:text-xl xl:text-size-lg leading-lg sm:mt-2 xl:mt-8"
+          >
+            If you are creative person, this is your life!
+          </p>
+        </div>
+        <form class="flex flex-col xl:flex-row xl:my-24">
+          <div class="hero-input-wrapper">
+            <Input
+              autofocus
+              type="number"
+              className="bg-white outline-none w-full xl:w-auto mb-3 xl:mb-0 pl-3"
+              name="hero-input"
+              placeholder="Your Salary Rate $"
+              required
+              size="sm"
+            />
+          </div>
+          <Button className="xl:ml-4" onclick={}>Send</Button>
+        </form>
+        <ul class="flex flex-col pt-20 xl:pt-30">
+          <li class="text-dark text-xs leading-xs">
+            Meet All inclusive and exotic Hotels
+          </li>
+          <li class="text-dark text-xs leading-xs">
+            155 Countries
+          </li>
+          <li class="text-dark text-xs leading-xs">
+            1 feed - a new destination every month.
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="mt-4 sm:w-1/2 sm:mt-0 relative">
-      <ResponsiveImage
-        className="d-flex"
-        alt="Background video travel landing banner"
-        width={{
-          desktop: '100%',
-          mobile: '100%'
-        }}
-        height={{
-          desktop: '100%',
-          mobile: '100%'
-        }}
-        url={{
-          desktop: '../images/home/webp/bg-video.webp',
-          mobile: '../images/home/webp/bg-video-mobile.webp',
-          mobile2x: '../images/home/webp/bg-video-mobile-2x.webp',
-          default: '../images/home/png/bg-video.png'
-        }}
-      />
-      <div id="video">
-        <!-- CLOSE BUTTON -->
-        <div id="close" class="hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0">X</div>
-        <!-- IFRAME VIDEO -->
-        <div class="youtube w-embed w-iframe absolute top-0 w-full h-full" id="banner-video"></div>
+    <div class="mt-4 sm:w-1/2 sm:mt-0">
+      <div class="relative">
+        <ResponsiveImage
+          className="d-flex"
+          alt="Background video travel landing banner"
+          width={{
+            desktop: '100%',
+            mobile: '100%'
+          }}
+          height={{
+            desktop: '100%',
+            mobile: '100%'
+          }}
+          url={{
+            desktop: '../images/home/webp/bg-video.webp',
+            mobile: '../images/home/webp/bg-video-mobile.webp',
+            mobile2x: '../images/home/webp/bg-video-mobile-2x.webp',
+            default: '../images/home/png/bg-video.png'
+          }}
+        />
+        <div id="video">
+          <!-- CLOSE BUTTON -->
+          <div id="close" class="hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0">X</div>
+          <!-- IFRAME VIDEO -->
+          <div class="youtube w-embed w-iframe absolute top-0 w-full h-full" id="banner-video"></div>
+        </div>
+        <PlayButton
+          id="play"
+          className="absolute cursor-pointer top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        />
       </div>
-      <PlayButton
-        id="play"
-        className="absolute cursor-pointer top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      />
     </div>
   </main>
 </Layout>

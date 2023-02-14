@@ -1,0 +1,56 @@
+---
+export interface InputProps {
+  className?: string;
+  placeholder?: string;
+  name?: string;
+  type?: string;
+  pattern?: string;
+  maxlength?: number;
+  readonly?: boolean;
+  autoFocus?: boolean;
+  required?: boolean;
+  value?: string;
+  size?: 'sm' | 'md' | 'lg';
+  onChange?: (e: { target: HTMLInputElement }) => void;
+  onBlur?: (e: { target: HTMLInputElement }) => void;
+  onKeyDown?: (e: { target: HTMLInputElement }) => void;
+  errorMessage?: string;
+}
+
+const {
+  className = '',
+  name = '',
+  type = 'text',
+  maxlength = '',
+  pattern = '',
+  placeholder = '',
+  readonly = false,
+  value = '',
+  size = 'sm',
+  onChange = () => {},
+  onBlur = () => {},
+  onKeyDown = () => {},
+  required = false,
+  errorMessage = '',
+} = Astro.props;
+---
+
+<input
+  readonly={readonly}
+  autofocus
+  type={type}
+  name={name}
+  placeholder={placeholder}
+  required={required}
+  class={`input input-${size} min-w-input-${size} min-h-input-${size} ${
+    errorMessage ? 'input-error' : ''
+  } ${className}`}
+  value={value}
+  maxlength={maxlength}
+  pattern={pattern}
+  size={size}
+  onchange={onChange}
+  onblur={onBlur}
+  onkeydown={onKeyDown}
+/>
+{errorMessage && <label class="input-error-message">{errorMessage}</label>}

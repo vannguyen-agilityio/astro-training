@@ -39,6 +39,9 @@
       "themes:*": [
         "src/themes/*.ts"
       ],
+      "constants:*": [
+        "src/constants/*.ts"
+      ],
     }
   },
   "include": [
