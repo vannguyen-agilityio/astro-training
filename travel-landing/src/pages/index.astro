@@ -13,9 +13,7 @@ import Button from 'components:Button/index';
   >
     <div class="pl-4 ppt-4 sm:py-4 sm:w-1/2 sm:pr-4">
       <Header />
-      <div
-        class="px-4 pt-8 sm:pr-0 md:pl-8 md:pb-8 md:pt-20 md:pl-20 md:pt-32"
-      >
+      <div class="px-4 pt-8 sm:pr-0 md:pl-8 md:pb-8 md:pt-20 md:pl-20 md:pt-32">
         <div class="pb-14 xl:pb-24">
           <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
             Travel <span class="text-primary">Around the World</span>
@@ -44,9 +42,7 @@ import Button from 'components:Button/index';
           <li class="text-dark text-xs leading-xs">
             Meet All inclusive and exotic Hotels
           </li>
-          <li class="text-dark text-xs leading-xs">
-            155 Countries
-          </li>
+          <li class="text-dark text-xs leading-xs">155 Countries</li>
           <li class="text-dark text-xs leading-xs">
             1 feed - a new destination every month.
           </li>
@@ -75,9 +71,18 @@ import Button from 'components:Button/index';
         />
         <div id="video">
           <!-- CLOSE BUTTON -->
-          <div id="close" class="hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0">X</div>
+          <div
+            id="close"
+            class="hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0"
+          >
+            X
+          </div>
           <!-- IFRAME VIDEO -->
-          <div class="youtube w-embed w-iframe absolute top-0 w-full h-full" id="banner-video"></div>
+          <div
+            class="youtube w-embed w-iframe absolute top-0 w-full h-full"
+            id="banner-video"
+          >
+          </div>
         </div>
         <PlayButton
           id="play"
@@ -87,5 +92,3 @@ import Button from 'components:Button/index';
     </div>
   </main>
 </Layout>
-
-<script defer type="text/javascript" src="js/video-hero.js" charset="UTF-8"></script>
