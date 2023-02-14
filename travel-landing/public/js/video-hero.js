@@ -8,29 +8,13 @@ let iframeWrapper = document.getElementById('banner-video');
 let iframe = document.getElementById('player');
 
 // 2. This code loads the IFrame Player API code asynchronously.
-document
-  .getElementById('play')
-  .addEventListener('mouseover', addTagYoutube);
 
 function addTagYoutube() {
   tag.src = 'https://www.youtube.com/iframe_api';
   tag.defer = true;
 }
 
-// 3. This function creates an <iframe> (and YouTube player)
-// after the API code downloads.
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-playButton.addEventListener('click', play);
-pauseButton.addEventListener('click', pause);
-
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  player = event.target;
-  event.target.playVideo();
-  playButton.classList.add('hidden');
-  pauseButton.classList.remove('hidden');
-  pauseButton.classList.add('block');
-}
+document.getElementById('play').addEventListener('mouseover', addTagYoutube);
 
 function pause() {
   if (player && player.pauseVideo) {
@@ -39,6 +23,15 @@ function pause() {
     pauseButton.classList.remove('block');
     pauseButton.classList.add('hidden');
   }
+}
+
+// he API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  player = event.target;
+  event.target.playVideo();
+  playButton.classList.add('hidden');
+  pauseButton.classList.remove('hidden');
+  pauseButton.classList.add('block');
 }
 
 function play() {
@@ -75,3 +68,17 @@ function play() {
     player.playVideo();
   }
 }
+
+// This function creates an <iframe> (and YouTube player)
+// after the API code downloads.
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+playButton.addEventListener('click', play);
+pauseButton.addEventListener('click', pause);
+
+// Find button send
+const sendSalary = document.getElementById('send');
+
+// Handle click button.
+sendSalary.addEventListener('click', () => {
+  console.log('Check value input and show alert');
+});

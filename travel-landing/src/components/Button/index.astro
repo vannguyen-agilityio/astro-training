@@ -1,20 +1,43 @@
 ---
 export interface ButtonProps {
-  type?: 'primary' | 'secondary' | 'rarely';
+  size?: 'primary' | 'secondary' | 'rarely';
+  type?: string;
   className?: '';
+  id?: string;
+  href?: string;
   onclick: () => void;
 }
 
-let { type = '', className = '', onclick = () => {} } = Astro.props;
+let {
+  type = '',
+  className = '',
+  href = '',
+  size = '',
+  id = '',
+  onclick = () => {}
+} = Astro.props;
 ---
 
-<button
-  class={`p-1 min-w-btn min-w-btn-${type} min-h-btn min-h-btn-${type} text-light text-size-xs leading-xs ${className} bg-primary bg-${type} ${
-    type === 'primary'
-      ? `py-9 px-10 flex items-center text-size-sm leading-sm justify-between`
-      : ''
-  }`}
-  {onclick}
->
-  <slot />
-</button>
+{
+  href === '' ? (
+    <button
+      id={id}
+      type={type}
+      class={`p-1 min-w-btn md:min-w-btn-${size} min-h-btn md:min-h-btn-${size} text-light text-xs md:text-size-xs leading-xs ${className} bg-primary bg-${type} ${
+        type === 'primary'
+          ? `py-3 px-3 md:py-9 md:px-10 flex items-center leading-sm justify-between`
+          : ''
+      }`}
+      {onclick}
+    >
+      <slot />
+    </button>
+  ) : (
+    <a
+      href={href}
+      class={`p-1 min-w-btn md:min-w-btn-${type} min-h-btn md:min-h-btn-${type} text-light text-xs md:text-size-xs leading-xs ${className} bg-primary bg-${type} py-3 px-3 md:py-9 md:px-10 flex items-center md:text-size-sm leading-sm justify-between`}
+    >
+      <slot />
+    </a>
+  )
+}

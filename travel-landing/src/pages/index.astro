@@ -5,21 +5,26 @@ import ResponsiveImage from 'components:ResponsiveImage';
 import PlayButton from 'components:PlayButton/index';
 import Input from 'components:Input/index';
 import Button from 'components:Button/index';
+import { ROUTES } from 'src/constants/routes';
 ---
 
 <Layout title="Travel Around the World">
   <main
-    class="sm:px-4 sm:pl-8 sm:py-0 sm:pr-0 sm:flex 2xl:container 2xl:mx-auto"
+    class="sm:px-4 sm:pl-8 sm:py-0 sm:pr-0 sm:flex 3xl:container 3xl:mx-auto relative"
   >
     <div class="pl-4 ppt-4 sm:py-4 sm:w-1/2 sm:pr-4">
       <Header />
-      <div class="px-4 pt-8 sm:pr-0 md:pl-8 md:pb-8 md:pt-20 md:pl-20 md:pt-32">
+      <div
+        class="px-4 pt-8 sm:pr-0 md:pl-8 md:pb-8 md:pt-20 md:pl-20 md:pt-32 relative"
+      >
         <div class="pb-14 xl:pb-24">
-          <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
+          <h1
+            class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl text-tertiary"
+          >
             Travel <span class="text-primary">Around the World</span>
           </h1>
           <p
-            class="text-dark text-xs md:text-xl xl:text-size-lg leading-lg sm:mt-2 xl:mt-8"
+            class="text-tertiary text-xs md:text-xl xl:text-size-lg leading-lg sm:mt-2 xl:mt-8"
           >
             If you are creative person, this is your life!
           </p>
@@ -30,22 +35,20 @@ import Button from 'components:Button/index';
               autofocus
               type="number"
               className="bg-white outline-none w-full xl:w-auto mb-3 xl:mb-0 pl-3"
-              name="hero-input"
+              name="salary"
               placeholder="Your Salary Rate $"
               required
               size="sm"
             />
           </div>
-          <Button className="xl:ml-4">Send</Button>
+          <Button id="send" type="submit" className="xl:ml-4">Send</Button>
         </form>
-        <ul class="flex flex-col pt-20 xl:pt-30">
-          <li class="text-dark text-xs leading-xs">
-            Meet All inclusive and exotic Hotels
-          </li>
-          <li class="text-dark text-xs leading-xs">155 Countries</li>
-          <li class="text-dark text-xs leading-xs">
-            1 feed - a new destination every month.
-          </li>
+        <ul
+          class="flex flex-col pt-20 xl:pt-30 text-xs leading-xs text-tertiary"
+        >
+          <li>Meet All inclusive and exotic Hotels</li>
+          <li>155 Countries</li>
+          <li>1 feed - a new destination every month.</li>
         </ul>
       </div>
     </div>
@@ -90,6 +93,16 @@ import Button from 'components:Button/index';
         />
       </div>
     </div>
+    <Button
+      className="absolute px-5 py-4 bottom-0 xl:bottom-32 left-1/2 -translate-x-1/2"
+      type="primary"
+      href={ROUTES.DESTINATIONS}
+      >Explore All Destinies<span
+        class="ml-2 md:ml-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
+        >&#8594;</span
+      >
+    </Button>
   </main>
 </Layout>
-<script defer type="text/javascript" src="js/video-hero.js" charset="UTF-8"></script>
+<script defer type="text/javascript" src="js/video-hero.js" charset="UTF-8"
+></script>
