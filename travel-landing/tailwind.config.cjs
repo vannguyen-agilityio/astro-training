@@ -9,12 +9,14 @@ module.exports = {
     'min-w-btn-rarely',
     'min-w-btn-secondary',
     'min-w-nav',
+    'min-w-banner',
     'min-w-input-sm',
     'min-h-btn',
     'min-h-btn-primary',
     'min-h-btn-secondary',
     'min-h-btn-rarely',
     'min-h-input-sm',
+    'min-h-banner',
     'max-w-alert',
     'text-tertiary',
     'text-primary'
@@ -35,14 +37,16 @@ module.exports = {
         'btn-rarely': '110px',
         'btn-secondary': '228px',
         'nav': '230px',
-        'input-sm': '240px'
+        'input-sm': '240px',
+        'banner': '480px'
       },
       minHeight: {
         'btn': '46px',
         'btn-primary': '110px',
         'btn-rarely': '38px',
         'btn-secondary': '56px',
-        'input-sm': '46px'
+        'input-sm': '46px',
+        'banner': '420px'
       },
       maxWidth: {
         'header': '695px',

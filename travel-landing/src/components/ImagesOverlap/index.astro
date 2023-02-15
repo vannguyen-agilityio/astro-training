@@ -1,0 +1,77 @@
+---
+import './styles.css';
+import ResponsiveImage from 'components:ResponsiveImage';
+import { IMAGES_ABOUT } from 'src/constants/common';
+
+export interface ImagesOverlapProps {
+  className?: '';
+}
+
+let { className = '' } = Astro.props;
+---
+
+<div class={`relative top-0 left-0 mt-20 ${className}`}>
+  <div class="absolute top-0 left-0">
+    <ResponsiveImage
+      className="d-flex"
+      alt="Background about avatar"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: '100%'
+      }}
+      url={{
+        desktop: IMAGES_ABOUT.avatarOneDesktop,
+        mobile: IMAGES_ABOUT.avatarOneMobile,
+        mobile2x: IMAGES_ABOUT.avatarOneDesktop,
+        default: IMAGES_ABOUT.avatarOneDefault
+      }}
+    />
+    <p class="text-tertiary text-xs xl:text-size-xs leading-xs mt-4">
+      Jack Ryan | Funder
+    </p>
+  </div>
+  <div class="absolute avatar-two">
+    <ResponsiveImage
+      className="d-flex"
+      alt="Background about avatar"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: '100%'
+      }}
+      url={{
+        desktop: IMAGES_ABOUT.avatarTwoDesktop,
+        mobile: IMAGES_ABOUT.avatarTwoMobile,
+        mobile2x: IMAGES_ABOUT.avatarTwoDesktop,
+        default: IMAGES_ABOUT.avatarTwoDefault
+      }}
+    />
+    <p class="text-tertiary text-xs xl:text-size-xs leading-xs mt-4">
+      Jone | De-Funder
+    </p>
+  </div>
+  <div class="absolute avatar-three">
+    <ResponsiveImage
+      className="d-flex"
+      alt="Background about avatar"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: '100%'
+      }}
+      url={{
+        desktop: IMAGES_ABOUT.avatarThreeDesktop,
+        mobile: IMAGES_ABOUT.avatarThreeMobile,
+        mobile2x: IMAGES_ABOUT.avatarThreeDesktop,
+        default: IMAGES_ABOUT.avatarThreeDefault
+      }}
+    />
+    <p class="text-tertiary text-xs xl:text-size-xs leading-xs mt-4">
+      Preston B | Co-Funder
+    </p>
+  </div>
+</div>

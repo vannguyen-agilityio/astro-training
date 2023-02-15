@@ -44,3 +44,25 @@ export const IMAGES_DESTINATIONS = {
   bgDestiniesFourMobile2x: '../images/destinations/webp/destinies-four.webp',
   bgDestiniesFourDefault: '../images/destinations/png/destinies-four.png'
 };
+
+export const IMAGES_ABOUT = {
+  bgAboutDesktop: '../images/about/webp/bg-about.webp',
+  bgAboutMobile: '../images/about/webp/bg-about-mobile.webp',
+  bgAboutMobile2x: '../images/about/webp/bg-about-mobile-2x.webp',
+  bgAboutDefault: '../images/about/png/bg-about.png',
+
+  avatarThreeDesktop: '../images/about/webp/avatar-three.webp',
+  avatarThreeMobile: '../images/about/webp/avatar-three-mobile.webp',
+  avatarThreeMobile2x: '../images/about/webp/avatar-three-mobile-2x.webp',
+  avatarThreeDefault: '../images/about/png/avatar-three.png',
+
+  avatarTwoDesktop: '../images/about/webp/avatar-two.webp',
+  avatarTwoMobile: '../images/about/webp/avatar-two-mobile.webp',
+  avatarTwoMobile2x: '../images/about/webp/avatar-two-mobile-2x.webp',
+  avatarTwoDefault: '../images/about/png/avatar-two.png',
+
+  avatarOneDesktop: '../images/about/webp/avatar-one.webp',
+  avatarOneMobile: '../images/about/webp/avatar-one-mobile.webp',
+  avatarOneMobile2x: '../images/about/webp/avatar-one-mobile-2x.webp',
+  avatarOneDefault: '../images/about/png/avatar-one.png'
+};
