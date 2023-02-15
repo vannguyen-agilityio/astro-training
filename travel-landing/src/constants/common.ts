@@ -23,7 +23,8 @@ export const IMAGES_DESTINATIONS = {
 
   bgDestiniesOneDesktop: '../images/destinations/webp/destinies-one.webp',
   bgDestiniesOneMobile: '../images/destinations/webp/destinies-one-mobile.webp',
-  bgDestiniesOneMobile2x: '../images/destinations/webp/destinies-one.webp',
+  bgDestiniesOneMobile2x:
+    '../images/destinations/webp/destinies-one-mobile-2x.webp',
   bgDestiniesOneDefault: '../images/destinations/png/destinies-one.png',
 
   bgDestiniesTwoDesktop: '../images/destinations/webp/destinies-two.webp',
