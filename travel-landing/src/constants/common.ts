@@ -66,3 +66,44 @@ export const IMAGES_ABOUT = {
   avatarOneMobile2x: '../images/about/webp/avatar-one-mobile-2x.webp',
   avatarOneDefault: '../images/about/png/avatar-one.png'
 };
+
+export const PRICING_LIST = [
+  {
+    className: '',
+    nameHotels: ['Hotel King Lux - Europe', 'Hotel Barchelor - France'],
+    salary: 1000,
+    imageUrls: {
+      desktop: '../images/pricing/webp/hotel-one.webp',
+      mobile: '../images/pricing/webp/hotel-one-mobile.webp',
+      mobile2x: '../images/pricing/webp/hotel-one.webp',
+      default: '../images/pricing/png/hotel-one.png'
+    }
+  },
+  {
+    className: 'sm:mx-4',
+    nameHotels: [
+      'Hotel King Lux - Europe',
+      'Hotel Barchelor - France',
+      'Hotel Altair -  Italy',
+      'Hotel Horsking - Germany'
+    ],
+    salary: 1500,
+    imageUrls: {
+      desktop: '../images/pricing/webp/hotel-two.webp',
+      mobile: '../images/pricing/webp/hotel-two-mobile.webp',
+      mobile2x: '../images/pricing/webp/hotel-two.webp',
+      default: '../images/pricing/png/hotel-two.png'
+    }
+  },
+  {
+    className: '',
+    nameHotels: ['12 Destinies Random across Europe'],
+    salary: 1300,
+    imageUrls: {
+      desktop: '../images/pricing/webp/hotel-three.webp',
+      mobile: '../images/pricing/webp/hotel-three-mobile.webp',
+      mobile2x: '../images/pricing/webp/hotel-three.webp',
+      default: '../images/pricing/png/hotel-three.png'
+    }
+  }
+];

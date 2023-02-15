@@ -1,18 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
+import CardPricing from 'components:CardPricing/index';
+import { PRICING_LIST } from 'constants:common';
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="p-4 md:p-8 md:pr-0 2xl:container 2xl:mx-auto">
-    <div class="md:w-1/2 md:pr-4">
-      <Header />
-      <div class="pt-8 md:pl-20 md:pb-20 md:pt-32">
-        <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
-          The <span class="text-primary">Pricing</span>
-        </h1>
+<Layout title="Pricing">
+  <main class="md:p-8 md:pr-0 2xl:container 2xl:mx-auto">
+    <Header className="p-4" />
+    <div class="pt-8 md:py-20 md:pb-20 md:pt-32">
+      <div class="flex flex-col sm:flex-row justify-center sm:items-end">
+        {
+          PRICING_LIST.map((item, index) => {
+            return <CardPricing data={item} />;
+          })
+        }
       </div>
     </div>
-    <div class="md:w-1/2"></div>
   </main>
 </Layout>
