@@ -3,9 +3,13 @@ import Layout from 'layouts:Layout';
 import Header from 'layouts:Header';
 import ResponsiveImage from 'components:ResponsiveImage';
 import PlayButton from 'components:PlayButton/index';
+import CloseButton from 'components:CloseButton/index';
 import Input from 'components:Input/index';
 import Button from 'components:Button/index';
+import Alert from 'components:Alert';
+import LinkButton from 'components:LinkButton/index';
 import { ROUTES } from 'src/constants/routes';
+import { IMAGES_HOME } from 'src/constants/common';
 ---
 
 <Layout title="Travel Around the World">
@@ -29,19 +33,27 @@ import { ROUTES } from 'src/constants/routes';
             If you are creative person, this is your life!
           </p>
         </div>
-        <form class="flex flex-col xl:flex-row xl:my-24">
-          <div class="hero-input-wrapper">
+        <!-- Will update after merged input component -->
+        <form class="flex flex-col xl:my-24">
+          <div class="flex flex-col xl:flex-row">
             <Input
               autofocus
               type="number"
+              id="input-salary"
               className="bg-white outline-none w-full xl:w-auto mb-3 xl:mb-0 pl-3"
               name="salary"
               placeholder="Your Salary Rate $"
               required
               size="sm"
             />
+            <Button id="send" type="submit" className="xl:ml-4">Send</Button>
           </div>
-          <Button id="send" type="submit" className="xl:ml-4">Send</Button>
+          <Alert
+            message="Send success"
+            hasIcon={true}
+            urlIcon="../check.svg"
+            className="flex justify-between mt-2 alert hidden xl:max-w-alert"
+          />
         </form>
         <ul
           class="flex flex-col pt-20 xl:pt-30 text-xs leading-xs text-tertiary"
@@ -58,28 +70,23 @@ import { ROUTES } from 'src/constants/routes';
           className="d-flex"
           alt="Background video travel landing banner"
           width={{
-            desktop: '100%',
-            mobile: '100%'
+            default: '100%'
           }}
           height={{
-            desktop: '100%',
-            mobile: '100%'
+            default: '100%'
           }}
           url={{
-            desktop: '../images/home/webp/bg-video.webp',
-            mobile: '../images/home/webp/bg-video-mobile.webp',
-            mobile2x: '../images/home/webp/bg-video-mobile-2x.webp',
-            default: '../images/home/png/bg-video.png'
+            desktop: IMAGES_HOME.bgVideoDesktop,
+            mobile: IMAGES_HOME.bgVideoMobile,
+            mobile2x: IMAGES_HOME.bgVideoMobile2x,
+            default: IMAGES_HOME.bgVideoDefault
           }}
         />
         <div id="video">
           <!-- CLOSE BUTTON -->
-          <div
-            id="close"
-            class="hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0"
-          >
-            X
-          </div>
+          <CloseButton id="close-video" className="mt-2 h-6 w-6">
+            <img class="w-5 h-5" src="../close.svg" alt="Close icon" />
+          </CloseButton>
           <!-- IFRAME VIDEO -->
           <div
             class="youtube w-embed w-iframe absolute top-0 w-full h-full"
@@ -88,21 +95,21 @@ import { ROUTES } from 'src/constants/routes';
           </div>
         </div>
         <PlayButton
-          id="play"
+          id="play-video"
           className="absolute cursor-pointer top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         />
       </div>
     </div>
-    <Button
+    <LinkButton
       className="absolute px-5 py-4 bottom-0 xl:bottom-32 left-1/2 -translate-x-1/2"
-      type="primary"
+      size="primary"
       href={ROUTES.DESTINATIONS}
       >Explore All Destinies<span
         class="ml-2 md:ml-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
         >&#8594;</span
       >
-    </Button>
+    </LinkButton>
   </main>
+  <script defer type="text/javascript" src="/js/home.js" charset="UTF-8"
+  ></script>
 </Layout>
-<script defer type="text/javascript" src="js/video-hero.js" charset="UTF-8"
-></script>

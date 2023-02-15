@@ -1,9 +1,10 @@
 ---
 export interface InputProps {
   className?: string;
+  id?: string;
   placeholder?: string;
   name?: string;
-  type?: string;
+  type: string;
   pattern?: string;
   maxlength?: number;
   readonly?: boolean;
@@ -14,11 +15,12 @@ export interface InputProps {
   onChange?: (e: { target: HTMLInputElement }) => void;
   onBlur?: (e: { target: HTMLInputElement }) => void;
   onKeyDown?: (e: { target: HTMLInputElement }) => void;
-  errorMessage?: string;
+  error?: string;
 }
 
 const {
   className = '',
+  id = '',
   name = '',
   type = 'text',
   maxlength = '',
@@ -31,7 +33,7 @@ const {
   onBlur = () => {},
   onKeyDown = () => {},
   required = false,
-  errorMessage = ''
+  error = ''
 } = Astro.props;
 ---
 
@@ -42,8 +44,9 @@ const {
   name={name}
   placeholder={placeholder}
   required={required}
+  id={id}
   class={`input input-${size} min-w-input-${size} min-h-input-${size} ${
-    errorMessage ? 'input-error' : ''
+    error ? 'input-error' : ''
   } ${className}`}
   value={value}
   maxlength={maxlength}
@@ -53,4 +56,4 @@ const {
   onblur={onBlur}
   onkeydown={onKeyDown}
 />
-{errorMessage && <label class="input-error-message">{errorMessage}</label>}
+{error && <label class="input-error-message">{error}</label>}

@@ -1,0 +1,18 @@
+---
+export interface LinkButtonProps {
+  size?: 'primary' | 'secondary' | 'rarely';
+  className?: '';
+  id?: string;
+  href: string;
+  onclick: () => void;
+}
+
+let { size = '', className = '', href = '' } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`p-1 min-w-btn md:min-w-btn-${size} min-h-btn md:min-h-btn-${size} text-light text-xs md:text-size-xs leading-xs ${className} bg-primary bg-${size} py-3 px-3 md:py-9 md:px-10 flex items-center md:text-size-sm leading-sm justify-between`}
+>
+  <slot />
+</a>

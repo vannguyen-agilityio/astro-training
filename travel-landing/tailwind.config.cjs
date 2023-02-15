@@ -15,6 +15,7 @@ module.exports = {
     'min-h-btn-secondary',
     'min-h-btn-rarely',
     'min-h-input-sm',
+    'max-w-alert',
     'text-tertiary',
     'text-primary'
   ],
@@ -46,7 +47,7 @@ module.exports = {
       maxWidth: {
         'header': '695px',
         'part': '50%',
-        'full': '100%'
+        'alert': '355px'
       },
       fontFamily: {
         primary: ['Abel', 'sans-serif']

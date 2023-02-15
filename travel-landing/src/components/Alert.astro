@@ -1,0 +1,25 @@
+---
+export interface Props {
+  message: string;
+  content?: string;
+  isError?: boolean;
+  urlIcon?: string;
+  hasIcon?: boolean;
+  className?: string;
+}
+
+const { message, content, isError, className, hasIcon, urlIcon } = Astro.props;
+---
+
+<div
+  class={`${
+    !isError ? 'bg-green-100' : 'bg-red-100'
+  } rounded-md p-3 flex ${className}`}
+>
+  {hasIcon && <img class="w-6 h-6 mr-4" src={urlIcon} alt="Check icon" />}
+  <div class={`${!isError ? 'text-green-700' : 'text-red-700'}`}>
+    <div class="font-bold text-xl">{message}</div>
+    <div>{content}</div>
+  </div>
+  <strong class="text-xl align-center cursor-pointer alert-del">&times;</strong>
+</div>

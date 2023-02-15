@@ -2,19 +2,21 @@
 let tag = document.createElement('script');
 let firstScriptTag = document.getElementsByTagName('script')[0];
 let player;
-let playButton = document.getElementById('play');
-let pauseButton = document.getElementById('close');
+let playButton = document.getElementById('play-video');
+let pauseButton = document.getElementById('close-video');
 let iframeWrapper = document.getElementById('banner-video');
 let iframe = document.getElementById('player');
 
-// 2. This code loads the IFrame Player API code asynchronously.
+// This code loads the IFrame Player API code asynchronously.
 
 function addTagYoutube() {
   tag.src = 'https://www.youtube.com/iframe_api';
   tag.defer = true;
 }
 
-document.getElementById('play').addEventListener('mouseover', addTagYoutube);
+document
+  .getElementById('play-video')
+  .addEventListener('mouseover', addTagYoutube);
 
 function pause() {
   if (player && player.pauseVideo) {
@@ -47,17 +49,17 @@ function play() {
     iframe.class = 'vid';
     iframe.width = '100%';
     iframe.height = '100%';
-    iframe.title = 'AgilityIO - Life at Agility Vietnam';
+    iframe.title = 'Travel Around VietNam';
     iframe.style = 'border: 0';
     iframe.setAttribute(
       'src',
-      'https://www.youtube-nocookie.com/embed/ci9QZbNLct0?enablejsapi=1'
+      'https://www.youtube.com/embed/2QTwk4nJljg?enablejsapi=1'
     );
     iframeWrapper.appendChild(iframe);
 
     // Initialize player to control when play/pause
     new YT.Player('player', {
-      videoId: 'ci9QZbNLct0',
+      videoId: '2QTwk4nJljg',
       events: {
         onReady: onPlayerReady
       }
@@ -70,15 +72,28 @@ function play() {
 }
 
 // This function creates an <iframe> (and YouTube player)
-// after the API code downloads.
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 playButton.addEventListener('click', play);
 pauseButton.addEventListener('click', pause);
 
 // Find button send
 const sendSalary = document.getElementById('send');
+const inputSalary = document.getElementById('input-salary');
 
 // Handle click button.
-sendSalary.addEventListener('click', () => {
-  console.log('Check value input and show alert');
+sendSalary.addEventListener('click', (e) => {
+  if (inputSalary.value !== '') {
+    let alert = document.getElementsByClassName('alert');
+    if (alert.length > 0) {
+      alert[0].classList.remove('hidden');
+    }
+    e.preventDefault();
+  }
 });
+
+let alertDel = document.querySelectorAll('.alert-del');
+alertDel.forEach((btnClose) =>
+  btnClose.addEventListener('click', function () {
+    btnClose.parentElement.classList.add('hidden');
+  })
+);

@@ -1,0 +1,15 @@
+---
+export interface ImageProps {
+  className?: string;
+  id?: string;
+}
+
+const { id, className } = Astro.props as ImageProps;
+---
+
+<div
+  id={id}
+  class={`hidden absolute top-0 z-10 cursor-pointer w-8 h-8 text-white border-solid border-white border rounded-full flex items-center justify-center right-0 ${className}`}
+>
+  <slot />
+</div>
