@@ -1,14 +1,19 @@
 ---
 import Layout from 'layouts:Layout';
 import Header from 'layouts:Header';
+import ResponsiveImage from 'components:ResponsiveImage';
+import ImagesOverlap from 'components:ImagesOverlap/index';
+import { IMAGES_ABOUT } from 'src/constants/common';
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="p-4 md:p-8 md:pr-0 2xl:container 2xl:mx-auto">
-    <div class="md:w-1/2 md:pr-4">
+<Layout title="The History">
+  <main
+    class="md:px-4 md:pl-8 md:py-0 md:pr-0 md:flex 3xl:container 3xl:mx-auto"
+  >
+    <div class="pl-4 pt-4 md:py-4 md:w-1/2 md:pr-4 md:min-w-banner">
       <Header />
-      <div class="pt-8 md:pl-20 md:pb-20 md:pt-32">
-        <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
+      <div class="px-4 pt-8 md:pr-0 md:pl-8 md:pb-8 md:pt-20 md:pl-20 md:pt-32">
+        <h1 class="text-tertiar mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
           The <span class="text-primary">History</span>
         </h1>
         <p
@@ -16,8 +21,34 @@ import Header from 'layouts:Header';
         >
           Across the creative success
         </p>
+        <p
+          class="text-tertiary text-xs xl:text-size-xs leading-xs mt-8 sm:mt-12 xl:mt-16 max-w-lg"
+        >
+          The story began when two friends decided to create a business that
+          would allow them to travel and work at the same time in a remote way
+          and knowing many destinations. I was born after a while, people
+          started to travel.
+        </p>
+        <ImagesOverlap className="min-h-banner" />
       </div>
     </div>
-    <div class="md:w-1/2"></div>
+    <div class="mt-4 md:w-1/2 md:mt-0">
+      <ResponsiveImage
+        className="d-flex"
+        alt="Background about banner"
+        width={{
+          default: '100%'
+        }}
+        height={{
+          default: '100%'
+        }}
+        url={{
+          desktop: IMAGES_ABOUT.bgAboutDesktop,
+          mobile: IMAGES_ABOUT.bgAboutMobile,
+          mobile2x: IMAGES_ABOUT.bgAboutMobile2x,
+          default: IMAGES_ABOUT.bgAboutDefault
+        }}
+      />
+    </div>
   </main>
 </Layout>
