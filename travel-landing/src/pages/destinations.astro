@@ -1,18 +1,19 @@
 ---
 import Layout from 'layouts:Layout';
-import Header from 'layouts:Header';
+import ImagesGrid from 'components:ImagesGrid/index';
+import LinkButton from 'components:LinkButton/index';
+import { ROUTES } from 'src/constants/routes';
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="p-4 md:p-8 md:pr-0 2xl:container 2xl:mx-auto">
-    <div class="md:w-1/2 md:pr-4">
-      <Header />
-      <div class="pt-8 md:pl-20 md:pb-20 md:pt-32">
-        <h1 class="mt-5 text-size-xl md:text-3xl xl:text-size-2xl">
-          The <span class="text-primary">Destinations</span>
-        </h1>
-      </div>
-    </div>
-    <div class="md:w-1/2"></div>
-  </main>
+<Layout title="Destinies">
+  <ImagesGrid />
+  <LinkButton
+    className="absolute md:min-w-btn-primary px-5 py-4 top-0 left-0"
+    size="primary"
+    href={ROUTES.HOME}
+    >Back<span
+      class="ml-2 md:ml-10 text-base flex items-center justify-center w-8 h-8 rounded-full border border-white border-solid"
+      >&#8592;</span
+    >
+  </LinkButton>
 </Layout>

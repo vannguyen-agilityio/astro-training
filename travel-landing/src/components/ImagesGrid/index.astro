@@ -1,0 +1,101 @@
+---
+import './styles.css';
+import { IMAGES_DESTINATIONS } from 'src/constants/common';
+import ResponsiveImage from 'components:ResponsiveImage';
+
+export interface ImagesGridProps {
+  className?: '';
+}
+
+let { className = '' } = Astro.props;
+---
+
+<!-- Photo Grid -->
+<div class={`row ${className}`}>
+  <div class="column column-one">
+    <ResponsiveImage
+      className="flex w-full"
+      alt="Background Destinies travel"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: 'auto'
+      }}
+      url={{
+        desktop: IMAGES_DESTINATIONS.bgDestiniesDesktop,
+        mobile: IMAGES_DESTINATIONS.bgDestiniesMobile,
+        mobile2x: IMAGES_DESTINATIONS.bgDestiniesMobile2x,
+        default: IMAGES_DESTINATIONS.bgDestiniesDefault
+      }}
+    />
+  </div>
+  <div class="column column-two">
+    <ResponsiveImage
+      className="flex w-full"
+      alt="Background Destinies travel"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: 'auto'
+      }}
+      url={{
+        desktop: IMAGES_DESTINATIONS.bgDestiniesOneDesktop,
+        mobile: IMAGES_DESTINATIONS.bgDestiniesOneMobile,
+        mobile2x: IMAGES_DESTINATIONS.bgDestiniesOneMobile2x,
+        default: IMAGES_DESTINATIONS.bgDestiniesOneDefault
+      }}
+    />
+    <ResponsiveImage
+      className="flex w-full"
+      alt="Background Destinies travel"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: 'auto'
+      }}
+      url={{
+        desktop: IMAGES_DESTINATIONS.bgDestiniesThreeDesktop,
+        mobile: IMAGES_DESTINATIONS.bgDestiniesThreeMobile,
+        mobile2x: IMAGES_DESTINATIONS.bgDestiniesThreeMobile2x,
+        default: IMAGES_DESTINATIONS.bgDestiniesThreeDefault
+      }}
+    />
+  </div>
+  <div class="column column-three">
+    <ResponsiveImage
+      className="flex w-full"
+      alt="Background Destinies travel"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: 'auto'
+      }}
+      url={{
+        desktop: IMAGES_DESTINATIONS.bgDestiniesTwoDesktop,
+        mobile: IMAGES_DESTINATIONS.bgDestiniesTwoMobile,
+        mobile2x: IMAGES_DESTINATIONS.bgDestiniesTwoMobile2x,
+        default: IMAGES_DESTINATIONS.bgDestiniesTwoDefault
+      }}
+    />
+    <ResponsiveImage
+      className="flex w-full"
+      alt="Background Destinies travel"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: 'auto'
+      }}
+      url={{
+        desktop: IMAGES_DESTINATIONS.bgDestiniesFourDesktop,
+        mobile: IMAGES_DESTINATIONS.bgDestiniesFourMobile,
+        mobile2x: IMAGES_DESTINATIONS.bgDestiniesFourMobile2x,
+        default: IMAGES_DESTINATIONS.bgDestiniesFourDefault
+      }}
+    />
+  </div>
+</div>
