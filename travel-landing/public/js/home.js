@@ -42,6 +42,7 @@ function play() {
     // Create iframe once loading
     iframe = document.createElement('iframe');
     playButton.classList.add('hidden');
+    pauseButton.classList.add('block');
     iframe.allowfullscreen = '';
     iframe.allow =
       'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
