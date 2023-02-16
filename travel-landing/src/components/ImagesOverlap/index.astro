@@ -10,7 +10,7 @@ export interface ImagesOverlapProps {
 let { className = '' } = Astro.props;
 ---
 
-<div class={`relative top-0 left-0 mt-20 ${className}`}>
+<div class={`relative max-w-alert md:max-w-full mt-20 ${className}`}>
   <div class="absolute top-0 left-0">
     <ResponsiveImage
       className="d-flex"
