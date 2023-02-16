@@ -25,6 +25,7 @@ function pause() {
     pauseButton.classList.remove('block');
     pauseButton.classList.add('hidden');
     iframeWrapper.classList.add('hidden');
+    iframeWrapper.classList.remove('fixed');
   }
 }
 
@@ -40,6 +41,7 @@ function onPlayerReady(event) {
 function play() {
   if (!iframe) {
     // Create iframe once loading
+    iframeWrapper.classList.add('fixed');
     iframe = document.createElement('iframe');
     playButton.classList.add('hidden');
     iframe.allowfullscreen = '';
@@ -72,6 +74,7 @@ function play() {
     iframeWrapper.classList.remove('hidden');
     playButton.classList.add('hidden');
     pauseButton.classList.remove('hidden');
+    iframeWrapper.classList.add('fixed');
   }
 }
 

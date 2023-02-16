@@ -11,5 +11,11 @@
 }
 
 .youtube {
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.fixed {
   position: fixed;
 }
