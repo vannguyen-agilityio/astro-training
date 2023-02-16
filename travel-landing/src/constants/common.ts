@@ -69,7 +69,7 @@ export const IMAGES_ABOUT = {
 
 export const PRICING_LIST = [
   {
-    className: '',
+    className: 'min-h-card-one',
     nameHotels: ['Hotel King Lux - Europe', 'Hotel Barchelor - France'],
     salary: 1000,
     imageUrls: {
@@ -80,7 +80,7 @@ export const PRICING_LIST = [
     }
   },
   {
-    className: 'sm:mx-4',
+    className: 'sm:mx-4 min-h-card-two',
     nameHotels: [
       'Hotel King Lux - Europe',
       'Hotel Barchelor - France',
@@ -96,7 +96,7 @@ export const PRICING_LIST = [
     }
   },
   {
-    className: '',
+    className: 'min-h-card-three',
     nameHotels: ['12 Destinies Random across Europe'],
     salary: 1300,
     imageUrls: {

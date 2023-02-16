@@ -17,6 +17,9 @@ module.exports = {
     'min-h-btn-secondary',
     'min-h-btn-rarely',
     'min-h-input-sm',
+    'min-h-card-one',
+    'min-h-card-two',
+    'min-h-card-three',
     'min-h-img-overlap',
     'min-h-banner',
     'min-h-form-contact',
@@ -55,7 +58,10 @@ module.exports = {
         'banner': '420px',
         'img-overlap': '310px',
         'form-contact': '581px',
-        'img-about': '480px'
+        'img-about': '480px',
+        'card-one': '446px',
+        'card-two': '504px',
+        'card-three': '417px'
       },
       maxWidth: {
         'header': '695px',
