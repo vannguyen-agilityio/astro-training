@@ -42,7 +42,7 @@ function play() {
     // Create iframe once loading
     iframe = document.createElement('iframe');
     playButton.classList.add('hidden');
-    pauseButton.classList.add('block');
+    pauseButton.classList.remove('hidden');
     iframe.allowfullscreen = '';
     iframe.allow =
       'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
@@ -73,7 +73,7 @@ function play() {
     iframeWrapper.classList.remove('hidden');
     playButton.classList.add('hidden');
     pauseButton.classList.remove('hidden');
-    pauseButton.classList.add('block');
+    pauseButton.classList.remove('hidden');
   }
 }
 
