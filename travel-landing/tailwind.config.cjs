@@ -16,8 +16,11 @@ module.exports = {
     'min-h-btn-secondary',
     'min-h-btn-rarely',
     'min-h-input-sm',
+    'min-h-img-overlap',
     'min-h-banner',
     'max-w-alert',
+    'max-w-form',
+    'max-w-btn-submit',
     'text-tertiary',
     'text-primary'
   ],
@@ -46,12 +49,15 @@ module.exports = {
         'btn-rarely': '38px',
         'btn-secondary': '56px',
         'input-sm': '46px',
-        'banner': '420px'
+        'banner': '420px',
+        'img-overlap': '310px'
       },
       maxWidth: {
         'header': '695px',
         'part': '50%',
-        'alert': '355px'
+        'alert': '355px',
+        'form': '480px',
+        'btn-submit': '100px'
       },
       fontFamily: {
         primary: ['Abel', 'sans-serif']
