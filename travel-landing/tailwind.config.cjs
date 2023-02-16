@@ -54,7 +54,8 @@ module.exports = {
         'input-sm': '46px',
         'banner': '420px',
         'img-overlap': '310px',
-        'form-contact': '581px'
+        'form-contact': '581px',
+        'img-about': '480px'
       },
       maxWidth: {
         'header': '695px',
