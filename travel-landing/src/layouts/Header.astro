@@ -11,12 +11,13 @@ export interface HeaderProps {
 const { className = '' } = Astro.props;
 
 const urlPathName = Astro.url.pathname?.replace('.html', '');
+const urlPath = urlPathName.substring(0, urlPathName.indexOf('/'));
 ---
 
 <header
   class={`flex items-center justify-between sm:max-w-part md:max-w-header ${className}`}
 >
-  <Debug answer={urlPathName} />
+  <Debug answer={urlPath} />
   <a class="mr-2" href={ROUTES.HOME}>
     <ResponsiveImage
       alt="Logo"
@@ -41,9 +42,7 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
           <li class="pr-1 cursor-pointer">
             <a
               class={`${
-                urlPathName ===
-                  item.href.substring(0, item.href.indexOf('/')) ||
-                urlPathName === item.href
+                urlPath === item.href || urlPathName === item.href
                   ? 'text-primary'
                   : ''
               }`}
