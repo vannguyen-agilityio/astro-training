@@ -2,6 +2,7 @@
 import { NAVIGATION } from 'src/constants/common';
 import { ROUTES } from 'src/constants/routes';
 import ResponsiveImage from 'components:ResponsiveImage';
+import { Debug } from 'astro/components';
 
 export interface HeaderProps {
   className?: string;
@@ -15,6 +16,7 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
 <header
   class={`flex items-center justify-between sm:max-w-part md:max-w-header ${className}`}
 >
+  <Debug answer={urlPathName} />
   <a class="mr-2" href={ROUTES.HOME}>
     <ResponsiveImage
       alt="Logo"

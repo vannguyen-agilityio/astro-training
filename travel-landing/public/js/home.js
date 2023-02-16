@@ -68,6 +68,7 @@ function play() {
       }
     });
     iframe.focus();
+    pauseButton.classList.remove('hidden');
   }
   if (player && player.playVideo) {
     player.playVideo();
