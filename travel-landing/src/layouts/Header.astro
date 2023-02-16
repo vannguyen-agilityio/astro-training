@@ -1,6 +1,7 @@
 ---
 import { NAVIGATION } from 'src/constants/common';
 import { ROUTES } from 'src/constants/routes';
+import ResponsiveImage from 'components:ResponsiveImage';
 
 export interface HeaderProps {
   className?: string;
@@ -14,7 +15,23 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
 <header
   class={`flex items-center justify-between sm:max-w-part md:max-w-header ${className}`}
 >
-  <a class="mr-2" href={ROUTES.HOME}>TW</a>
+  <a class="mr-2" href={ROUTES.HOME}>
+    <ResponsiveImage
+      alt="Logo"
+      width={{
+        default: '100%'
+      }}
+      height={{
+        default: '100%'
+      }}
+      url={{
+        desktop: '/images/logo.webp',
+        mobile: '/images/logo-mobile.webp',
+        mobile2x: '/images/logo.webp',
+        default: '/images/logo.png'
+      }}
+    />
+  </a>
   <nav>
     <ul class="flex min-w-nav text-xs md:text-size-xs justify-between">
       {
