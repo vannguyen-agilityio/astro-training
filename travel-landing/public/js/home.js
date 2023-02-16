@@ -73,7 +73,6 @@ function play() {
     iframeWrapper.classList.remove('hidden');
     playButton.classList.add('hidden');
     pauseButton.classList.remove('hidden');
-    pauseButton.classList.remove('hidden');
   }
 }
 
