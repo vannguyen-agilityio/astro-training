@@ -11,6 +11,7 @@ module.exports = {
     'min-w-nav',
     'min-w-banner',
     'min-w-input-sm',
+    'min-w-form-contact',
     'min-h-btn',
     'min-h-btn-primary',
     'min-h-btn-secondary',
@@ -18,6 +19,7 @@ module.exports = {
     'min-h-input-sm',
     'min-h-img-overlap',
     'min-h-banner',
+    'min-h-form-contact',
     'max-w-alert',
     'max-w-form',
     'max-w-btn-submit',
@@ -41,7 +43,8 @@ module.exports = {
         'btn-secondary': '228px',
         'nav': '230px',
         'input-sm': '240px',
-        'banner': '480px'
+        'banner': '480px',
+        'form-contact': '375px'
       },
       minHeight: {
         'btn': '46px',
@@ -50,7 +53,8 @@ module.exports = {
         'btn-secondary': '56px',
         'input-sm': '46px',
         'banner': '420px',
-        'img-overlap': '310px'
+        'img-overlap': '310px',
+        'form-contact': '581px'
       },
       maxWidth: {
         'header': '695px',
