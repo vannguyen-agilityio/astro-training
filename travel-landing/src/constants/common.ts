@@ -4,8 +4,8 @@ import { ROUTES } from 'src/constants/routes';
 export const NAVIGATION = [
   { label: 'Home', href: ROUTES.HOME },
   { label: 'About', href: ROUTES.ABOUT },
-  { label: 'Pricing', href: ROUTES.PRICING },
-  { label: 'Destinations', href: ROUTES.DESTINATIONS }
+  { label: 'Destinations', href: ROUTES.DESTINATIONS },
+  { label: 'Pricing', href: ROUTES.PRICING }
 ];
 
 export const IMAGES_HOME = {
@@ -75,7 +75,7 @@ export const PRICING_LIST = [
     imageUrls: {
       desktop: '../images/pricing/webp/hotel-one.webp',
       mobile: '../images/pricing/webp/hotel-one-mobile.webp',
-      mobile2x: '../images/pricing/webp/hotel-one.webp',
+      mobile2x: '../images/pricing/webp/hotel-one-mobile-2x.webp',
       default: '../images/pricing/png/hotel-one.png'
     }
   },
