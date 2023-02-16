@@ -36,7 +36,7 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
     <ul class="flex min-w-nav text-xs md:text-size-xs justify-between">
       {
         NAVIGATION.map((item, index) => (
-          <li class="pr-1">
+          <li class="pr-1 cursor-pointer">
             <a
               class={`${urlPathName === item.href ? 'text-primary' : ''}`}
               href={item.href}
