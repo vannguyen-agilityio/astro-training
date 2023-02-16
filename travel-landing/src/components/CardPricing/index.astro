@@ -21,7 +21,7 @@ const { data } = Astro.props;
   <p class="text-size-md md:text-size-xl md:leading-xl my-8">
     Salary + ${data.salary}
   </p>
-  <ul class="px-4 sm:px-0 mb-6 text-size-xs md:text-size-md">
+  <ul class="px-4 sm:px-0 mb-6 text-size-xs md:text-sm xl:text-size-md">
     {
       data.nameHotels.map((item, index) => {
         return <li class="mb-1 leading-md">{item}</li>;
