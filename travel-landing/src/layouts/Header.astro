@@ -42,7 +42,11 @@ const urlPathTrim =
         NAVIGATION.map((item, index) => (
           <li class="pr-1 cursor-pointer">
             <a
-              class={`${urlPathTrim === item.href ? 'text-primary' : ''}`}
+              class={`${
+                urlPathTrim === item.href || urlPathName === item.href
+                  ? 'text-primary'
+                  : ''
+              }`}
               href={item.href}
             >
               {item.label}
