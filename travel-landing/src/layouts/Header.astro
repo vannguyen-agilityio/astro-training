@@ -10,6 +10,10 @@ export interface HeaderProps {
 const { className = '' } = Astro.props;
 
 const urlPathName = Astro.url.pathname?.replace('.html', '');
+const urlPathTrim =
+  urlPathName.length - 1 > 0
+    ? urlPathName.substring(urlPathName.length - 1, urlPathName.indexOf('/'))
+    : urlPathName;
 ---
 
 <header
@@ -38,14 +42,7 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
         NAVIGATION.map((item, index) => (
           <li class="pr-1 cursor-pointer">
             <a
-              class={`${
-                urlPathName.substring(
-                  urlPathName.length - 1,
-                  urlPathName.indexOf('/')
-                ) === item.href
-                  ? 'text-primary'
-                  : ''
-              }`}
+              class={`${urlPathTrim === item.href ? 'text-primary' : ''}`}
               href={item.href}
             >
               {item.label}
