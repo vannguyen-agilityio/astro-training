@@ -2,7 +2,6 @@
 import { NAVIGATION } from 'src/constants/common';
 import { ROUTES } from 'src/constants/routes';
 import ResponsiveImage from 'components:ResponsiveImage';
-import { Debug } from 'astro/components';
 
 export interface HeaderProps {
   className?: string;
@@ -11,13 +10,11 @@ export interface HeaderProps {
 const { className = '' } = Astro.props;
 
 const urlPathName = Astro.url.pathname?.replace('.html', '');
-const urlPath = urlPathName.substring(0, urlPathName.indexOf('/'));
 ---
 
 <header
   class={`flex items-center justify-between sm:max-w-part md:max-w-header ${className}`}
 >
-  <Debug answer={urlPath} />
   <a class="mr-2" href={ROUTES.HOME}>
     <ResponsiveImage
       alt="Logo"
@@ -42,7 +39,10 @@ const urlPath = urlPathName.substring(0, urlPathName.indexOf('/'));
           <li class="pr-1 cursor-pointer">
             <a
               class={`${
-                urlPath === item.href || urlPathName === item.href
+                urlPathName.substring(
+                  urlPathName.length - 1,
+                  urlPathName.indexOf('/')
+                ) === item.href
                   ? 'text-primary'
                   : ''
               }`}
