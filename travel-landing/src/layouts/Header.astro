@@ -41,7 +41,9 @@ const urlPathName = Astro.url.pathname?.replace('.html', '');
           <li class="pr-1 cursor-pointer">
             <a
               class={`${
-                urlPathName === (item.href || item.href + '/')
+                urlPathName ===
+                  item.href.substring(0, item.href.indexOf('/')) ||
+                urlPathName === item.href
                   ? 'text-primary'
                   : ''
               }`}
