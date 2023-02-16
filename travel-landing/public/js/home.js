@@ -24,6 +24,7 @@ function pause() {
     playButton.classList.remove('hidden');
     pauseButton.classList.remove('block');
     pauseButton.classList.add('hidden');
+    iframeWrapper.classList.add('hidden');
   }
 }
 
@@ -68,6 +69,9 @@ function play() {
   }
   if (player && player.playVideo) {
     player.playVideo();
+    iframeWrapper.classList.remove('hidden');
+    playButton.classList.add('hidden');
+    pauseButton.classList.remove('hidden');
   }
 }
 
