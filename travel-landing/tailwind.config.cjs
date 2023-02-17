@@ -23,6 +23,7 @@ module.exports = {
     'min-h-card-three',
     'min-h-img-overlap',
     'min-h-banner',
+    'min-h-492',
     'min-h-form-contact',
     'max-w-alert',
     'max-w-form',
@@ -63,7 +64,8 @@ module.exports = {
         'img-about': '480px',
         'card-one': '446px',
         'card-two': '504px',
-        'card-three': '417px'
+        'card-three': '417px',
+        '492': '492px'
       },
       maxWidth: {
         'header': '695px',
