@@ -14,6 +14,7 @@ module.exports = {
     'min-w-375',
     'min-w-200',
     'min-w-30',
+    'min-w-119',
     'sm:min-w-356',
     'sm:min-h-434',
     'min-h-btn',
@@ -59,7 +60,8 @@ module.exports = {
         'banner': '480px',
         '375': '375px',
         '356': '356px',
-        '30': '30px'
+        '30': '30px',
+        '119': '119px'
       },
       minHeight: {
         'btn': '46px',
