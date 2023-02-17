@@ -21,7 +21,7 @@ const { id, className } = Astro.props as ImageProps;
       urlIcon="../check.svg"
       className="flex justify-between mb-4 alert hidden xl:max-w-full"
     />
-    <div class="flex flex-col mb-4">
+    <div class="flex flex-col mb-2">
       <div class="flex mb-2">
         <label class="w-16 h-6">Full Name</label>
         <span class="text-red-500">*</span>
@@ -29,15 +29,15 @@ const { id, className } = Astro.props as ImageProps;
       <Input
         autofocus
         id="input-name"
-        className="bg-white outline-none w-full xl:w-auto mb-3 xl:mb-0 pl-3"
+        className="bg-white outline-none w-full xl:w-auto xl:mb-0 pl-3"
         name="full-name"
         placeholder=""
         required
         size="sm"
       />
-      <p id="error-name" class="text-red-500 text-xs"></p>
+      <p id="error-name" class="text-red-500 text-xs mt-2"></p>
     </div>
-    <div class="flex flex-col mb-4">
+    <div class="flex flex-col mb-2">
       <div class="flex mb-2">
         <label class="w-14 h-6">E-mail</label>
         <span class="text-red-500">*</span>
@@ -46,15 +46,15 @@ const { id, className } = Astro.props as ImageProps;
         autofocus
         type="email"
         id="input-email"
-        className="bg-white outline-none w-full xl:w-auto mb-3 xl:mb-0 pl-3"
+        className="bg-white outline-none w-full xl:w-auto xl:mb-0 pl-3"
         name="email"
         placeholder=""
         required
         size="sm"
       />
-      <p id="error-email" class="text-red-500 text-xs"></p>
+      <p id="error-email" class="text-red-500 text-xs mt-2"></p>
     </div>
-    <div class="flex flex-col mb-4">
+    <div class="flex flex-col mb-2">
       <div class="flex mb-2">
         <label class="w-14 h-6">Message</label>
         <span class="text-red-500">*</span>
@@ -64,11 +64,11 @@ const { id, className } = Astro.props as ImageProps;
         autofocus
         type="text"
         id="input-message"
-        class="bg-white outline-none w-full xl:w-auto mb-3 xl:mb-0 pl-3"
+        class="bg-white outline-none w-full xl:w-auto xl:mb-0 pl-3"
         name="message"
         placeholder=""
         required></textarea>
-      <p id="error-message" class="text-red-500 text-xs"></p>
+      <p id="error-message" class="text-red-500 text-xs mt-2"></p>
     </div>
     <Button id="btn-submit" className="max-w-btn-submit mx-auto mt-4"
       >Submit</Button
