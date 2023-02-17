@@ -69,7 +69,7 @@ export const IMAGES_ABOUT = {
 
 export const PRICING_LIST = [
   {
-    className: 'min-h-card-one sm:min-h-full sm:min-w-card-pricing',
+    className: 'min-h-446 min-w-375 sm:min-h-full sm:min-w-356',
     nameHotels: ['Hotel King Lux - Europe', 'Hotel Barchelor - France'],
     salary: 1000,
     imageUrls: {
@@ -80,7 +80,7 @@ export const PRICING_LIST = [
     }
   },
   {
-    className: 'sm:mx-4 min-h-card-two sm:min-h-full sm:min-w-card-pricing',
+    className: 'sm:mx-4 min-h-504 min-w-375 sm:min-h-full sm:min-w-356',
     nameHotels: [
       'Hotel King Lux - Europe',
       'Hotel Barchelor - France',
@@ -96,7 +96,7 @@ export const PRICING_LIST = [
     }
   },
   {
-    className: 'min-h-card-three sm:min-h-full sm:min-w-card-pricing',
+    className: 'min-h-417 min-w-375 sm:min-h-full sm:min-w-356',
     nameHotels: ['12 Destinies Random across Europe'],
     salary: 1300,
     imageUrls: {
