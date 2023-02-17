@@ -12,12 +12,16 @@ module.exports = {
     'min-w-banner',
     'min-w-input-sm',
     'min-w-375',
+    'min-w-200',
+    'min-w-30',
     'sm:min-w-356',
+    'sm:min-h-434',
     'min-h-btn',
     'min-h-btn-primary',
     'min-h-btn-secondary',
     'min-h-btn-rarely',
     'min-h-input-sm',
+    'min-h-16',
     'min-h-446',
     'min-h-504',
     'min-h-417',
@@ -27,6 +31,7 @@ module.exports = {
     'min-h-492',
     'min-h-405',
     'min-h-581',
+    'min-h-32',
     'max-w-alert',
     'max-w-form',
     'max-w-btn-submit',
@@ -49,11 +54,12 @@ module.exports = {
         'btn-rarely': '110px',
         'btn-secondary': '228px',
         'nav': '230px',
+        '200': '200px',
         'input-sm': '240px',
         'banner': '480px',
         '375': '375px',
         '356': '356px',
-
+        '30': '30px'
       },
       minHeight: {
         'btn': '46px',
@@ -70,7 +76,9 @@ module.exports = {
         '417': '417px',
         '405': '405',
         '492': '492px',
-        '434': '434px'
+        '434': '434px',
+        '32': '32px',
+        '16': '16px'
       },
       maxWidth: {
         'header': '695px',

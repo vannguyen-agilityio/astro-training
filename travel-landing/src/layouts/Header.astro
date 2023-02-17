@@ -36,13 +36,13 @@ const urlPathTrim =
       }}
     />
   </a>
-  <nav>
-    <ul class="flex min-w-nav text-xs md:text-size-xs justify-between">
+  <nav class="min-w-200 min-h-16">
+    <ul class="flex min-w-200 min-h-16 text-xs md:text-size-xs justify-between">
       {
         NAVIGATION.map((item, index) => (
-          <li class="pr-1 cursor-pointer">
+          <li class="min-w-30 min-h-16 pr-1 cursor-pointer">
             <a
-              class={`${
+              class={`min-w-30 min-h-16 ${
                 urlPathTrim === item.href || urlPathName === item.href
                   ? 'text-primary'
                   : ''
