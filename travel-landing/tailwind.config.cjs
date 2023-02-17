@@ -59,9 +59,9 @@ module.exports = {
         'img-overlap': '310px',
         'form-contact': '581px',
         'img-about': '480px',
-        'card-one': '430px',
-        'card-two': '490px',
-        'card-three': '400px'
+        'card-one': '446px',
+        'card-two': '504px',
+        'card-three': '417px'
       },
       maxWidth: {
         'header': '695px',
