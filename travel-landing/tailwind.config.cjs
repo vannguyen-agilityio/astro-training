@@ -12,6 +12,7 @@ module.exports = {
     'min-w-banner',
     'min-w-input-sm',
     'min-w-form-contact',
+    'sm:min-w-card-pricing',
     'min-h-btn',
     'min-h-btn-primary',
     'min-h-btn-secondary',
@@ -47,7 +48,8 @@ module.exports = {
         'nav': '230px',
         'input-sm': '240px',
         'banner': '480px',
-        'form-contact': '375px'
+        'form-contact': '375px',
+        'card-pricing': '356px'
       },
       minHeight: {
         'btn': '46px',
