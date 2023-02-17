@@ -69,7 +69,7 @@ export const IMAGES_ABOUT = {
 
 export const PRICING_LIST = [
   {
-    className: 'min-h-446 min-w-375 sm:min-h-full sm:min-w-356',
+    className: 'min-h-446 min-w-375 sm:min-h-434 sm:min-w-356',
     nameHotels: ['Hotel King Lux - Europe', 'Hotel Barchelor - France'],
     salary: 1000,
     imageUrls: {
@@ -80,7 +80,7 @@ export const PRICING_LIST = [
     }
   },
   {
-    className: 'sm:mx-4 min-h-504 min-w-375 sm:min-h-full sm:min-w-356',
+    className: 'sm:mx-4 min-h-504 min-w-375 sm:min-h-492 sm:min-w-356',
     nameHotels: [
       'Hotel King Lux - Europe',
       'Hotel Barchelor - France',

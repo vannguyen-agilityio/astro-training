@@ -21,9 +21,11 @@ module.exports = {
     'min-h-446',
     'min-h-504',
     'min-h-417',
+    'min-h-434',
     'min-h-img-overlap',
     'min-h-banner',
     'min-h-492',
+    'min-h-405',
     'min-h-581',
     'max-w-alert',
     'max-w-form',
@@ -66,7 +68,9 @@ module.exports = {
         '446': '446px',
         '504': '504px',
         '417': '417px',
-        '492': '492px'
+        '405': '405',
+        '492': '492px',
+        '434': '434px'
       },
       maxWidth: {
         'header': '695px',
